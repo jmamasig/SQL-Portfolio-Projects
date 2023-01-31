@@ -1,0 +1,36 @@
+##Clothing store:
+T-Shirt (10)
+Longsleeve T-Shirt (8)
+Sweater (9)
+Jacket (4)
+Hoodie (6)
+Pants (7)
+Denim (5)
+Shorts (11)
+Socks (15)
+Ring (13)
+Earring (14)
+Bandana (12)
+Necklace (3)
+Shoes (2)
+Bracelet (1)
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, color TEXT);
+
+INSERT INTO clothing_store VALUES (1, "T-Shirt", 10, 4.99, "Black");
+INSERT INTO clothing_store VALUES (2, "Longsleeve T-Shirt", 8, 7.99, "White"); 
+INSERT INTO clothing_store VALUES (3, "Sweater", 9, 11.99, "Green");
+INSERT INTO clothing_store VALUES (4, "Jacket", 4, 59.99, "Khaki");
+INSERT INTO clothing_store VALUES (5, "Hoodie", 6, 44.99, "Brown");
+INSERT INTO clothing_store VALUES (6, "Pants", 7, 49.99, "Back");
+INSERT INTO clothing_store VALUES (7, "Denim", 5, 74.99, "Light Blue");
+INSERT INTO clothing_store VALUES (8, "Shorts", 11, 19.99, "Grey");
+INSERT INTO clothing_store VALUES (9, "Socks", 15, 2.99, "White");
+INSERT INTO clothing_store VALUES (10, "Ring", 13, 79.99, "Silver");
+INSERT INTO clothing_store VALUES (12, "Bandanda", 12, 4.99, "Red");
+INSERT INTO clothing_store VALUES (13, "Necklace", 3, 99.99, "Gold");
+INSERT INTO clothing_store VALUES (14, "Shoes", 2, 124.99, "Black");
+INSERT INTO clothing_store VALUES (15, "Bracelet", 1, 149.99, "Silver");
+
+SELECT * FROM clothing_store ORDER BY price;
+SELECT (price*1.08) FROM clothing_store as total
