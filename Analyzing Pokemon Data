@@ -1,0 +1,44 @@
+/* Credit to: @whatkairos for the data Link: https://gist.github.com/pamelafox/26b9357c6120d3d0d27c2b90c950e8c6 */
+
+/* What are the are min, max, and average across all Pokemon's HP, Attack, and Defense stats */
+
+SELECT MAX(HP) FROM pokemon;
+SELECT MIN(HP) FROM pokemon;
+SELECT AVG(HP) FROM pokemon;
+
+SELECT MAX(Attack) FROM pokemon;
+SELECT MIN(Attack) FROM pokemon;
+SELECT AVG(Attack) FROM pokemon;
+
+SELECT MAX(Defense) FROM pokemon;
+SELECT MIN(Defense) FROM pokemon;
+SELECT AVG(Defense) FROM pokemon;
+
+/* What pokemon typing has the highest Attack stat */
+
+SELECT type_1, ROUND(AVG(attack), 2) AS avg_attack
+FROM pokemon
+GROUP BY type_1
+ORDER BY AVG(attack) DESC;
+
+/* Result Dragon w/ 112.13 */
+
+/* What pokemon have an attack stat that is above average with the Dragon typing that is not a Legendary? */
+
+SELECT Name, Attack
+FROM pokemon
+WHERE
+	Type_1 = "Dragon" AND
+    Attack >= 112 AND
+    Legendary = "False"
+ORDER BY Attack desc;
+
+/* Result: 
+GarchompMega Garchomp	170
+Haxorus	147
+SalamenceMega Salamence	145
+Salamence	135
+Dragonite	134
+Garchomp	130
+Druddigon	120
+Fraxure	117 */
