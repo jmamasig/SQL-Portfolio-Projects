@@ -1,18 +1,15 @@
 /* Credit to: @whatkairos for the data Link: https://gist.github.com/pamelafox/26b9357c6120d3d0d27c2b90c950e8c6 */
 
-/* What are the are min, max, and average across all Pokemon's HP, Attack, and Defense stats */
-
-SELECT MAX(HP) FROM pokemon;
-SELECT MIN(HP) FROM pokemon;
-SELECT AVG(HP) FROM pokemon;
+/* What are the are min, max, and average across all Pokemon's Attack stats */
 
 SELECT MAX(Attack) FROM pokemon;
 SELECT MIN(Attack) FROM pokemon;
 SELECT AVG(Attack) FROM pokemon;
 
-SELECT MAX(Defense) FROM pokemon;
-SELECT MIN(Defense) FROM pokemon;
-SELECT AVG(Defense) FROM pokemon;
+/* Result:
+Max 190
+Min 5
+Avg 79 */
 
 /* What pokemon typing has the highest Attack stat */
 
@@ -42,3 +39,65 @@ Dragonite	134
 Garchomp	130
 Druddigon	120
 Fraxure	117 */
+
+/* How many pokemon's attack stat are below or above average? And categorized by Very Low, Low, High, and Very High */
+
+SELECT
+  CASE 
+    WHEN attack <= 39 THEN 'Very Low'
+    WHEN attack BETWEEN 40 AND 79 THEN 'Low'
+    WHEN attack BETWEEN 80 AND 134 THEN 'High'
+    ELSE 'Very High'
+  END AS attack_category,
+ COUNT(*) as count
+FROM pokemon
+GROUP BY attack_category
+ORDER BY 
+CASE 
+    WHEN attack_category = 'Very Low' THEN 1
+    WHEN attack_category = 'Low' THEN 2
+    WHEN attack_category = 'High' THEN 3
+    ELSE 4
+  END;
+  
+/* Result:
+Very Low	64
+Low		358
+High		331
+Very High	47 */
+
+/* How many pokemon's defense stat are below or above average? And categorized by Very Low, Low, High, and Very High */
+
+SELECT
+  CASE 
+    WHEN attack <= 37 THEN 'Very Low'
+    WHEN attack BETWEEN 38 AND 74 THEN 'Low'
+    WHEN attack BETWEEN 75 AND 152 THEN 'High'
+    ELSE 'Very High'
+  END AS attack_category,
+ COUNT(*) as count
+FROM pokemon
+GROUP BY attack_category
+ORDER BY 
+CASE 
+    WHEN attack_category = 'Very Low' THEN 1
+    WHEN attack_category = 'Low' THEN 2
+    WHEN attack_category = 'High' THEN 3
+    ELSE 4
+  END;
+  
+/* Result:
+Very Low	61
+Low		316
+High		405
+Very High	18 */
+
+/* Which pokemon has a Very High defense stat AND attack stat? */
+
+SELECT name
+FROM pokemon
+WHERE attack > 134 AND defense > 152;
+
+/* Result:
+Mega Aggron
+Groudon Primal */
