@@ -1,0 +1,15 @@
+CREATE TABLE teams (
+  team_id INTEGER PRIMARY KEY, 
+  team_name TEXT, 
+  region TEXT,
+  country TEXT
+  );
+  
+INSERT INTO teams (team_id, team_name, region) VALUES (1, "BBL Esports", "EMEA", "Turkey");
+INSERT INTO teams (team_id, team_name, region) VALUES (2, "Fnatic", "EMEA", "United Kingdom");
+INSERT INTO teams (team_id, team_name, region) VALUES (3, "FUT Esports", "EMEA");
+INSERT INTO teams (team_id, team_name, region) VALUES (4, "Giants", "EMEA");
+INSERT INTO teams (team_id, team_name, region) VALUES (5, "Karmine Corp", "EMEA");
+INSERT INTO teams (team_id, team_name, region) VALUES (6, "KOI", "EMEA");
+INSERT INTO teams (team_id, team_name, region) VALUES (7, "Natus Vincere", "EMEA");
+INSERT INTO teams (team_id, team_name, region) VALUES (8, "Team Heretics", "EMEA");
