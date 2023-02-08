@@ -5,11 +5,56 @@ CREATE TABLE teams (
   country TEXT
   );
   
-INSERT INTO teams (team_id, team_name, region) VALUES (1, "BBL Esports", "EMEA", "Turkey");
-INSERT INTO teams (team_id, team_name, region) VALUES (2, "Fnatic", "EMEA", "United Kingdom");
-INSERT INTO teams (team_id, team_name, region) VALUES (3, "FUT Esports", "EMEA");
-INSERT INTO teams (team_id, team_name, region) VALUES (4, "Giants", "EMEA");
-INSERT INTO teams (team_id, team_name, region) VALUES (5, "Karmine Corp", "EMEA");
-INSERT INTO teams (team_id, team_name, region) VALUES (6, "KOI", "EMEA");
-INSERT INTO teams (team_id, team_name, region) VALUES (7, "Natus Vincere", "EMEA");
-INSERT INTO teams (team_id, team_name, region) VALUES (8, "Team Heretics", "EMEA");
+INSERT INTO teams (team_id, team_name, region) VALUES (1, "100 Thieves", "Americas", "United States");
+INSERT INTO teams (team_id, team_name, region) VALUES (2, "Cloud9", "Americas", "United States");
+INSERT INTO teams (team_id, team_name, region) VALUES (4, "NRG", "Americas", "United States");
+INSERT INTO teams (team_id, team_name, region) VALUES (5,"DRX", "Pacific", "Korean");
+INSERT INTO teams (team_id, team_name, region) VALUES (6,"Gen.G", "Pacific", "Korean");
+INSERT INTO teams (team_id, team_name, region) VALUES (7, "Paper Rex", "Pacific", "Singapore");
+
+CREATE TABLE players (
+  player_id INTEGER PRIMARY KEY,
+  first_name TEXT,
+  last_name TEXT,
+  player_name TEXT,
+  team_id INTEGER,  
+  country TEXT
+  );
+  
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (1, "Peter", "Mazuryk", "Asuna", 1, "United States")
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (2, "Derrek", "Ha", "Derrek", 1, "United States")
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (3, "Brenden", "McGrath", "stellar", 1, "United States")
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (4, "Sean", "Bezerra", "bang", 1, "United States")
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (5, "Matthew", "Panganiban", "Cryocells", 1, "United States")
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (6, "Nathan", "Orf", "leaf", 2, "United States")
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (7, "Erick", "Bach", "Xeppa", 2, "United States")
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
+INSERT INTO players (player_id, first_name, last_name, player_name, team_id, country) VALUES (
